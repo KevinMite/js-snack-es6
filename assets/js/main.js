@@ -93,4 +93,21 @@ console.log(newArray)
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 // Usiamo i nuovi metodi degli array foreach o filter.
 
+let myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
+let min = parseInt(prompt(`Inserisci un numero compresso fra 0 e ${myArray.length - 1}`))
+let max = parseInt(prompt(`Inserisci un numero compresso fra 0 e ${myArray.length - 1}`))
 
+function myFuction(array, x, y){
+    let arrayFiltrato = myArray.filter( (element, index) => {
+
+        if(x < index && y > index ){
+            return element
+        }
+    })
+
+    return arrayFiltrato
+}
+
+let arrayCustom = myFuction(myArray, min, max)
+
+console.log(arrayCustom) 
