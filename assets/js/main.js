@@ -21,11 +21,20 @@ const bici = [{
 
 let biciLeggera = bici [0]
 
-// console.log( bici[0].name.length )
 
 bici.forEach( ( element, index, array )  => {
-    element.name.length
+    if(element.peso < biciLeggera.peso ){
+        biciLeggera = element
+
+    }   
 })
+console.log( biciLeggera )
+
+const{ name, peso } = biciLeggera
+
+document.writeln(`La bici più leggera è ${ name }, il suo peso è ${ peso }`)
+ 
+
 
 
 
